@@ -5,7 +5,7 @@ const nextConfig = {
   },
 
   images: {
-    domains: ['themoviedb.org', 'www.themoviedb.org'],
+    domains: ['themoviedb.org', 'www.themoviedb.org', 'image.tmdb.org'],
   }
 }
 

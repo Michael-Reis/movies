@@ -287,9 +287,9 @@ body.dark .switch::before{
     position: absolute;
     top: 0;
     top: 0;
-    left: 260px;
+    left: 250px;
     height: 100vh;
-    width: calc(100% - 260px);
+    width: calc(100% - 250px);
     background-color: var(--body-color);
     transition: var(--tran-05);
     color: white!important;
@@ -302,9 +302,9 @@ body.dark .switch::before{
 }
 
 .sidebar.close ~ .home{
-    left: 100px;
+    left: 88px;
     height: 100vh;
-    width: calc(100% - 100px);
+    width: calc(100% - 88px);
 }
 body.dark .home .text{
     color: white;
