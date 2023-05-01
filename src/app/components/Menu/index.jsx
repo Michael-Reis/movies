@@ -52,7 +52,7 @@ export const Menu = () => {
 
                         <li className={`nav-link ${url == "/movies" ? "menu-active" : ""}`}>
                             <Link href="/movies">
-                                <i className='bx bx-bell icon'></i>
+                                <i className='bx bx-search icon'></i>
                                 <span className="text nav-text">movies</span>
                             </Link>
                         </li>

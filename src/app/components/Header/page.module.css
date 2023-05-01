@@ -62,3 +62,27 @@
     background-color: white;
     color: black;
 }
+
+@media (max-width: 900px) {
+
+    .banner_content{
+        width: 100%;
+    }
+    .banner_content h1 {
+        font-size: 20px;
+    }
+
+    .banner_content p {
+        font-size: 12px;
+    }
+    .banner_genero{
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-right: 0;
+    }
+
+    .banner_genero div {
+        margin-right: 0px;
+    }
+
+}

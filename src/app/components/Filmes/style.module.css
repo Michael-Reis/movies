@@ -1,0 +1,111 @@
+.carrousel_filmes {
+    display: flex;
+    overflow: hidden;
+    margin-left: 20px;
+    margin-top: -80px;
+    /* overflow-x: scroll; */
+}
+
+.carrousel_filme {
+    height: 400px;
+}
+
+.carrousel_item_filme {
+    position: relative;
+    flex: none;
+    height: 200px;
+    width: 400px;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: border 0.5s ease-in-out;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.carrousel_item_filme:hover {
+    cursor: pointer;
+    border: 2px solid white;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.carrousel_item_filme:hover .backdrop {
+    opacity: 0.5;
+}
+
+.carrousel_item_filme img {
+    top: 0;
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+}
+
+.carrousel_conteudo_filme {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 12;
+    display: flex;
+    align-items: flex-end;
+    padding: 20px;
+
+}
+
+.carrousel_conteudo_filme h2 {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.backdrop {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(135deg, rgb(53, 56, 58) -16%, rgba(19, 19, 31, 0) 100%);
+    z-index: 11;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+.carrousel_item_filme:hover~.carrousel_sessao_oculta {
+    opacity: 1;
+    visibility: visible;
+}
+
+.carrousel_sessao_oculta {
+    width: 400px;
+    height: 200px;
+    border-radius: 5px;
+    background-color: #242526;
+    color: white;
+    position: relative;
+    z-index: 100;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid white;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+    visibility: hidden;
+}
+
+@media (max-width: 768px) {
+    .carrousel_item_filme{
+        width: 200px;
+        height: 100px;
+    }
+
+    .carrousel_sessao_oculta{
+        width: 200px;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    .carrousel_sessao_oculta p{
+        font-size: 12px;
+    }
+}
