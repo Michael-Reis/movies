@@ -30,7 +30,7 @@
 }
 
 .banner_content h1 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 500;
     margin-bottom: 20px;
 }
@@ -63,11 +63,39 @@
     color: black;
 }
 
+.banner_pesquisar {
+    position: absolute;
+    top: 70px;
+    right: 30px;
+    width: 300px;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+    font-size: 15px;
+    outline: none;
+    color: #dfdfdf;
+    background-color: #3a3b3c;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    display: flex;
+    align-items: center;
+}
+.banner_pesquisar i {
+    height: 100%;
+    width: 50px;
+    text-align: center;
+}
+.banner_pesquisar input {
+    all: unset;
+    height: 100%;
+    width: 100%;
+}
+
 @media (max-width: 900px) {
 
-    .banner_content{
+    .banner_content {
         width: 100%;
     }
+
     .banner_content h1 {
         font-size: 20px;
     }
@@ -75,7 +103,8 @@
     .banner_content p {
         font-size: 12px;
     }
-    .banner_genero{
+
+    .banner_genero {
         flex-wrap: wrap;
         gap: 10px;
         margin-right: 0;
