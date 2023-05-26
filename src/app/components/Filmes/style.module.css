@@ -2,12 +2,17 @@
     display: flex;
     overflow: hidden;
     margin-left: 20px;
-    margin-top: -80px;
-    /* overflow-x: scroll; */
+    margin-bottom: 10px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    
 }
 
 .carrousel_filme {
-    height: 400px;
+    height: 200px;
+    margin-right: 10px;
+    scroll-snap-align: start;
+
 }
 
 .carrousel_item_filme {
@@ -48,16 +53,19 @@
     position: absolute;
     height: 100%;
     width: 100%;
-    z-index: 12;
+    z-index: 3000;
     display: flex;
     align-items: flex-end;
     padding: 20px;
-
+    z-index: 300;
 }
 
 .carrousel_conteudo_filme h2 {
     font-size: 18px;
     font-weight: 500;
+    z-index: 10;
+    transition: all 0.5s ease-in-out;
+
 }
 
 .backdrop {
@@ -67,45 +75,61 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(135deg, rgb(53, 56, 58) -16%, rgba(19, 19, 31, 0) 100%);
-    z-index: 11;
+    z-index: 20;
     opacity: 1;
     transition: opacity 1s ease-in-out;
 }
 
-.carrousel_item_filme:hover~.carrousel_sessao_oculta {
+.carrousel_conteudo_filme:hover~.carrousel_sessao_oculta {
     opacity: 1;
     visibility: visible;
 }
 
+
+
+.carrousel_conteudo_filme:hover h2 {
+    opacity: 0;
+}
+
 .carrousel_sessao_oculta {
+    position: absolute;
     width: 400px;
     height: 200px;
     border-radius: 5px;
-    background-color: #242526;
+    background-color: #242526b0;
     color: white;
-    position: relative;
     z-index: 100;
     padding: 10px;
     font-size: 15px;
-    border: 1px solid white;
     opacity: 0;
     transition: all 0.5s ease-in-out;
     visibility: hidden;
+    bottom: 0;
 }
 
+
+.carrousel_sessao_oculta p {
+    font-size: 12px;
+}
+
+
 @media (max-width: 768px) {
-    .carrousel_item_filme{
-        width: 200px;
-        height: 100px;
+
+    .carrousel_filme {
+        height: 150px;
+    }
+    .carrousel_item_filme {
+        width: 250px;
+        height: 150px;
     }
 
-    .carrousel_sessao_oculta{
-        width: 200px;
-        height: 100px;
+    .carrousel_sessao_oculta {
+        width: 250px;
+        height: 150px;
         overflow: hidden;
     }
 
-    .carrousel_sessao_oculta p{
+    .carrousel_sessao_oculta p {
         font-size: 12px;
     }
 }

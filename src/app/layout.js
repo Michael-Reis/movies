@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className='dark'>
-        <Menu />
+        {/* <Menu /> */}
         <section className="home">
           {children}
         </section>
