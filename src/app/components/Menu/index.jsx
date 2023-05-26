@@ -29,7 +29,7 @@ export const Menu = () => {
                     </div>
                 </div>
 
-                <i className='bx bx-chevron-right toggle' onClick={() => { menu == "close" ? setMenu("open") : setMenu("close") }} />
+                <i className='bx bx-chevron-right toggle' onClick={() => { menu == "close" ? setMenu("close") : setMenu("close") }} />
             </header>
 
             <div className="menu-bar">

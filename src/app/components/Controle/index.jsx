@@ -62,9 +62,12 @@ export default function Controle({ banner_inicial }) {
             <Header dados_filme={banner_inicial} filtro={filtro} setFiltro={setFiltro} />
 
             <div className='paginacao'>
-                <button onClick={paginaAnterior} disabled={paginaAtual === 1}>Anterior</button>
                 <span>{paginaAtual} de {totalPaginas}</span>
-                <button onClick={proximaPagina} disabled={paginaAtual === totalPaginas}>Próxima</button>
+                <div>
+                    <button className="mr-2" onClick={paginaAnterior} disabled={paginaAtual === 1}>Anterior</button>
+                    <button onClick={proximaPagina} disabled={paginaAtual === totalPaginas}>Próxima</button>
+
+                </div>
             </div>
 
             {filmes && (
